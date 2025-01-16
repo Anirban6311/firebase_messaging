@@ -1,0 +1,27 @@
+name: notification_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core:
+  firebase_auth:
+  firebase_messaging:
+  flutter_local_notifications:
+  cloud_firestore:
+  shared_preferences:
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true

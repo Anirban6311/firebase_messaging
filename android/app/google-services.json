@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160695091587",
+    "project_id": "save-token-firebase-e1a16",
+    "storage_bucket": "save-token-firebase-e1a16.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160695091587:android:cda618cd131714f8e576b6",
+        "android_client_info": {
+          "package_name": "com.example.notification_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1rTvEKmXPJlvTI4vxFT4T4y7CYPUIMmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
