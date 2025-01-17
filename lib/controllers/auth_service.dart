@@ -20,7 +20,7 @@ class AuthService {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      return "Account Created";
+      return "Login Successful";
     } on FirebaseAuthException catch (e) {
       return e.message.toString();
     } catch (e) {
@@ -31,6 +31,7 @@ class AuthService {
   /// logout functionality
   static Future logout() async {
     await FirebaseAuth.instance.signOut();
+    return "Logged Out";
   }
 
   ///check weather the user is logged in or not?
