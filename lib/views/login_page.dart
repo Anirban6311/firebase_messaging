@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification_app/controllers/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -45,7 +46,25 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                await AuthService.loginWithEmail(
+                        emailController.text, passwordController.text)
+                    .then((value) {
+                  if (value == "Login Successful") {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text("Login Successful")));
+                    Navigator.pushReplacementNamed(context, '/home');
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(
+                        value,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                      backgroundColor: Colors.red,
+                    ));
+                  }
+                });
+              },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(
                     vertical: 14.0, horizontal: 36.0),
